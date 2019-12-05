@@ -2,7 +2,7 @@
 <html>
 <head><meta charset="utf-8" />
 
-<title>Lab2_Linear-Regression</title>
+<title>Lab2_Linear_Regression</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13130,10 +13130,9 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-(a.)-Produce-a-scatterplot-matrix-which-includes-all-of-the-variables-in-the-data-set."><font color="blue"> (a.)</font> Produce a scatterplot matrix which includes all of the variables in the data set.<a class="anchor-link" href="#-(a.)-Produce-a-scatterplot-matrix-which-includes-all-of-the-variables-in-the-data-set.">&#182;</a></h3><h3 id="-(b.)-Compute-the-matrix-of-correlations-between-the-variables-using-the-function--cor().-You-will-need-to-exclude-the--name-varibale,-which-is-qualitative."><font color="blue"> (b.)</font> Compute the matrix of correlations between the variables using the function <font color="red"> cor()</font>. You will need to exclude the <font color="red"> name </font>varibale, which is qualitative.<a class="anchor-link" href="#-(b.)-Compute-the-matrix-of-correlations-between-the-variables-using-the-function--cor().-You-will-need-to-exclude-the--name-varibale,-which-is-qualitative.">&#182;</a></h3><h3 id="-(c.)-Use-the--lm()-function-to-perform-a-multiple-linear-regression-with--mpg-as-the-response-and-all-other-variables-except--name-as-the-predictors.-Use-the--summary()-function-to-print-the-results."><font color="blue"> (c.)</font> Use the <font color="red"> lm() </font>function to perform a multiple linear regression with <font color="red"> mpg </font>as the response and all other variables except <font color="red"> name </font>as the predictors. Use the <font color="red"> summary() </font>function to print the results.<a class="anchor-link" href="#-(c.)-Use-the--lm()-function-to-perform-a-multiple-linear-regression-with--mpg-as-the-response-and-all-other-variables-except--name-as-the-predictors.-Use-the--summary()-function-to-print-the-results.">&#182;</a></h3><h3 id="Comment-on-the-output.-For-instance&#65306;">Comment on the output. For instance&#65306;<a class="anchor-link" href="#Comment-on-the-output.-For-instance&#65306;">&#182;</a></h3><h3>&emsp;(i.) Is there a relationship between the predictors and the response?</h3>
-<h3>&emsp;(ii.) Which predictors appear to have a statistically significant relationship to the response?</h3>
-<h3>&emsp;(iii.) What does the coefficient for the <font color='red'> year </font> variable suggest?</h3>
-
+<h3 id="-(a.)-Produce-a-scatterplot-matrix-which-includes-all-of-the-variables-in-the-data-set."><font color="blue"> (a.)</font> Produce a scatterplot matrix which includes all of the variables in the data set.<a class="anchor-link" href="#-(a.)-Produce-a-scatterplot-matrix-which-includes-all-of-the-variables-in-the-data-set.">&#182;</a></h3><h3 id="-(b.)-Compute-the-matrix-of-correlations-between-the-variables-using-the-function--cor().-You-will-need-to-exclude-the--name-varibale,-which-is-qualitative."><font color="blue"> (b.)</font> Compute the matrix of correlations between the variables using the function <font color="red"> cor()</font>. You will need to exclude the <font color="red"> name </font>varibale, which is qualitative.<a class="anchor-link" href="#-(b.)-Compute-the-matrix-of-correlations-between-the-variables-using-the-function--cor().-You-will-need-to-exclude-the--name-varibale,-which-is-qualitative.">&#182;</a></h3><h3 id="-(c.)-Use-the--lm()-function-to-perform-a-multiple-linear-regression-with--mpg-as-the-response-and-all-other-variables-except--name-as-the-predictors.-Use-the--summary()-function-to-print-the-results."><font color="blue"> (c.)</font> Use the <font color="red"> lm() </font>function to perform a multiple linear regression with <font color="red"> mpg </font>as the response and all other variables except <font color="red"> name </font>as the predictors. Use the <font color="red"> summary() </font>function to print the results.<a class="anchor-link" href="#-(c.)-Use-the--lm()-function-to-perform-a-multiple-linear-regression-with--mpg-as-the-response-and-all-other-variables-except--name-as-the-predictors.-Use-the--summary()-function-to-print-the-results.">&#182;</a></h3><h3 id="Comment-on-the-output.-For-instance&#65306;">Comment on the output. For instance&#65306;<a class="anchor-link" href="#Comment-on-the-output.-For-instance&#65306;">&#182;</a></h3><h3>&emsp;(i.) Which predictors appear to have a statistically significant relationship to the response?</h3>
+<h3>&emsp;(ii.) What does the coefficient for the <font color='red'> year </font> variable suggest?</h3>
+<h3 id="-(d.)-Use-the--*--and--:--symbols-to-fit-linear-regression-models-with-interaction-effects.-Do-any-interactions-appear-to-be-statistically-significant?"><font color="blue"> (d.)</font> Use the <font color="red"> * </font> and <font color="red"> : </font> symbols to fit linear regression models with interaction effects. Do any interactions appear to be statistically significant?<a class="anchor-link" href="#-(d.)-Use-the--*--and--:--symbols-to-fit-linear-regression-models-with-interaction-effects.-Do-any-interactions-appear-to-be-statistically-significant?">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14023,21 +14022,146 @@ F-statistic: 252.4 on 7 and 384 DF,  p-value: &lt; 2.2e-16
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-(c.)(i.)"><font color="darkred"> (c.)(i.)</font><a class="anchor-link" href="#-(c.)(i.)">&#182;</a></h3><h3 id="By-testing-the-null-hypothesis,-$H_0:\beta_i=0\-\forall-i$,-the-F-statistic-is--$252.4$-and-the-p-value-is-close-to-zero(less-than-$2.2e^{-16}$)-so-that-we-can-reject-the-null-hypothesis.">By testing the null hypothesis, $H_0:\beta_i=0\ \forall i$, the F-statistic is  $252.4$ and the p-value is close to zero(less than $2.2e^{-16}$) so that we can reject the null hypothesis.<a class="anchor-link" href="#By-testing-the-null-hypothesis,-$H_0:\beta_i=0\-\forall-i$,-the-F-statistic-is--$252.4$-and-the-p-value-is-close-to-zero(less-than-$2.2e^{-16}$)-so-that-we-can-reject-the-null-hypothesis.">&#182;</a></h3><h3 id="And-we-can-indicates-that-there-exists-a-clear-evidence-of-a-relationship-between--&quot;mpg&quot;-and-the-other-predictors.">And we can indicates that there exists a clear evidence of a relationship between <font color="red"> "mpg"</font> and the other predictors.<a class="anchor-link" href="#And-we-can-indicates-that-there-exists-a-clear-evidence-of-a-relationship-between--&quot;mpg&quot;-and-the-other-predictors.">&#182;</a></h3>
+<h3 id="-(c.)(i.)"><font color="darkred"> (c.)(i.)</font><a class="anchor-link" href="#-(c.)(i.)">&#182;</a></h3><h3 id="By-checking-the-p-values,-we-may-conclude-that-all-predictors-are-statistically-significant-to-the-response-except--&quot;cylinders&quot;,-&quot;horsepower&quot;,-and-&quot;acceleration&quot;.">By checking the p-values, we may conclude that all predictors are statistically significant to the response except <font color="red"> "cylinders", "horsepower", and "acceleration"</font>.<a class="anchor-link" href="#By-checking-the-p-values,-we-may-conclude-that-all-predictors-are-statistically-significant-to-the-response-except--&quot;cylinders&quot;,-&quot;horsepower&quot;,-and-&quot;acceleration&quot;.">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-(c.)(ii.)"><font color="darkred"> (c.)(ii.)</font><a class="anchor-link" href="#-(c.)(ii.)">&#182;</a></h3><h3 id="By-checking-the-p-values,-we-may-conclude-that-all-predictors-are-statistically-significant-to-the-response-except--&quot;cylinders&quot;,-&quot;horsepower&quot;,-and-&quot;acceleration&quot;.">By checking the p-values, we may conclude that all predictors are statistically significant to the response except <font color="red"> "cylinders", "horsepower", and "acceleration"</font>.<a class="anchor-link" href="#By-checking-the-p-values,-we-may-conclude-that-all-predictors-are-statistically-significant-to-the-response-except--&quot;cylinders&quot;,-&quot;horsepower&quot;,-and-&quot;acceleration&quot;.">&#182;</a></h3>
+<h3 id="-(c.)(ii.)"><font color="darkred"> (c.)(ii.)</font><a class="anchor-link" href="#-(c.)(ii.)">&#182;</a></h3><h3 id="&#30070;&#20854;&#20182;&#35722;&#25976;&#22266;&#23450;&#26178;&#65292;&#30070;-&quot;year&quot;-&#19978;&#21319;&#19968;&#20491;&#21934;&#20301;&#26178;&#65292;-&quot;mpg&quot;-&#30340;&#24179;&#22343;&#21453;&#25033;&#26371;&#22686;&#21152;$0.750773$&#20491;&#21934;&#20301;">&#30070;&#20854;&#20182;&#35722;&#25976;&#22266;&#23450;&#26178;&#65292;&#30070;<font color="red"> "year" </font>&#19978;&#21319;&#19968;&#20491;&#21934;&#20301;&#26178;&#65292;<font color="red"> "mpg" </font>&#30340;&#24179;&#22343;&#21453;&#25033;&#26371;&#22686;&#21152;$0.750773$&#20491;&#21934;&#20301;<a class="anchor-link" href="#&#30070;&#20854;&#20182;&#35722;&#25976;&#22266;&#23450;&#26178;&#65292;&#30070;-&quot;year&quot;-&#19978;&#21319;&#19968;&#20491;&#21934;&#20301;&#26178;&#65292;-&quot;mpg&quot;-&#30340;&#24179;&#22343;&#21453;&#25033;&#26371;&#22686;&#21152;$0.750773$&#20491;&#21934;&#20301;">&#182;</a></h3>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-(c.)(iii.)"><font color="darkred"> (c.)(iii.)</font><a class="anchor-link" href="#-(c.)(iii.)">&#182;</a></h3><h3 id="&#30070;&#20854;&#20182;&#35722;&#25976;&#22266;&#23450;&#26178;&#65292;&#30070;-&quot;year&quot;-&#19978;&#21319;&#19968;&#20491;&#21934;&#20301;&#26178;&#65292;-&quot;mpg&quot;-&#30340;&#24179;&#22343;&#21453;&#25033;&#26371;&#22686;&#21152;$0.750773$&#20491;&#21934;&#20301;">&#30070;&#20854;&#20182;&#35722;&#25976;&#22266;&#23450;&#26178;&#65292;&#30070;<font color="red"> "year" </font>&#19978;&#21319;&#19968;&#20491;&#21934;&#20301;&#26178;&#65292;<font color="red"> "mpg" </font>&#30340;&#24179;&#22343;&#21453;&#25033;&#26371;&#22686;&#21152;$0.750773$&#20491;&#21934;&#20301;<a class="anchor-link" href="#&#30070;&#20854;&#20182;&#35722;&#25976;&#22266;&#23450;&#26178;&#65292;&#30070;-&quot;year&quot;-&#19978;&#21319;&#19968;&#20491;&#21934;&#20301;&#26178;&#65292;-&quot;mpg&quot;-&#30340;&#24179;&#22343;&#21453;&#25033;&#26371;&#22686;&#21152;$0.750773$&#20491;&#21934;&#20301;">&#182;</a></h3>
+<h3 id="-(d.)"><font color="darkred"> (d.)</font><a class="anchor-link" href="#-(d.)">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">lm_fit_int</span> <span class="o">=</span> <span class="nf">lm</span><span class="p">(</span><span class="n">mpg</span><span class="o">~</span><span class="n">cylinders</span><span class="o">:</span><span class="n">displacement</span><span class="o">+</span><span class="n">displacement</span><span class="o">:</span><span class="n">weight</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">Auto</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">lm_fit_int</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>
+Call:
+lm(formula = mpg ~ cylinders:displacement + displacement:weight, 
+    data = Auto)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-11.5522  -3.3109  -0.6592   2.7231  17.4894 
+
+Coefficients:
+                         Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)             3.126e+01  3.884e-01   80.47  &lt; 2e-16 ***
+cylinders:displacement -7.481e-04  1.335e-03   -0.56    0.576    
+displacement:weight    -1.041e-05  2.546e-06   -4.09 5.25e-05 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 4.767 on 389 degrees of freedom
+Multiple R-squared:  0.6288,	Adjusted R-squared:  0.6269 
+F-statistic: 329.5 on 2 and 389 DF,  p-value: &lt; 2.2e-16
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#27492;&#36852;&#27512;&#27169;&#22411;&#30340;&#35299;&#37323;&#35722;&#25976;&#19981;&#21253;&#21547;displacement&#12289;weight&#12289;cylinders&#65292;&#21482;&#21547;&#20132;&#20114;&#20316;&#29992;&#38917;">&#27492;&#36852;&#27512;&#27169;&#22411;&#30340;&#35299;&#37323;&#35722;&#25976;&#19981;&#21253;&#21547;displacement&#12289;weight&#12289;cylinders&#65292;&#21482;&#21547;&#20132;&#20114;&#20316;&#29992;&#38917;<a class="anchor-link" href="#&#27492;&#36852;&#27512;&#27169;&#22411;&#30340;&#35299;&#37323;&#35722;&#25976;&#19981;&#21253;&#21547;displacement&#12289;weight&#12289;cylinders&#65292;&#21482;&#21547;&#20132;&#20114;&#20316;&#29992;&#38917;">&#182;</a></h3><h3 id="displacement&#36319;weight&#30340;&#20132;&#20114;&#20316;&#29992;&#38917;&#30340;p-value&#36275;&#22816;&#23567;&#65292;&#21487;&#20197;&#25298;&#32085;&#34395;&#28961;&#20551;&#35373;&#65292;&#20063;&#23601;&#26159;&#35498;&#25793;&#26377;&#36275;&#22816;&#30340;&#35657;&#25818;&#39023;&#31034;&#20132;&#20114;&#20316;&#29992;&#38917;&#26159;&#39023;&#33879;&#30340;&#12290;">displacement&#36319;weight&#30340;&#20132;&#20114;&#20316;&#29992;&#38917;&#30340;p-value&#36275;&#22816;&#23567;&#65292;&#21487;&#20197;&#25298;&#32085;&#34395;&#28961;&#20551;&#35373;&#65292;&#20063;&#23601;&#26159;&#35498;&#25793;&#26377;&#36275;&#22816;&#30340;&#35657;&#25818;&#39023;&#31034;&#20132;&#20114;&#20316;&#29992;&#38917;&#26159;&#39023;&#33879;&#30340;&#12290;<a class="anchor-link" href="#displacement&#36319;weight&#30340;&#20132;&#20114;&#20316;&#29992;&#38917;&#30340;p-value&#36275;&#22816;&#23567;&#65292;&#21487;&#20197;&#25298;&#32085;&#34395;&#28961;&#20551;&#35373;&#65292;&#20063;&#23601;&#26159;&#35498;&#25793;&#26377;&#36275;&#22816;&#30340;&#35657;&#25818;&#39023;&#31034;&#20132;&#20114;&#20316;&#29992;&#38917;&#26159;&#39023;&#33879;&#30340;&#12290;">&#182;</a></h3><h3 id="displacement&#36319;cylinders&#30340;&#20132;&#20114;&#20316;&#29992;&#38917;&#30340;p-value&#22826;&#22823;&#65292;&#28961;&#27861;&#25298;&#32085;&#34395;&#28961;&#20551;&#35373;&#12290;">displacement&#36319;cylinders&#30340;&#20132;&#20114;&#20316;&#29992;&#38917;&#30340;p-value&#22826;&#22823;&#65292;&#28961;&#27861;&#25298;&#32085;&#34395;&#28961;&#20551;&#35373;&#12290;<a class="anchor-link" href="#displacement&#36319;cylinders&#30340;&#20132;&#20114;&#20316;&#29992;&#38917;&#30340;p-value&#22826;&#22823;&#65292;&#28961;&#27861;&#25298;&#32085;&#34395;&#28961;&#20551;&#35373;&#12290;">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">lm_fit_int_1</span> <span class="o">=</span> <span class="nf">lm</span><span class="p">(</span><span class="n">mpg</span><span class="o">~</span><span class="n">cylinders</span><span class="o">*</span><span class="n">displacement</span><span class="o">+</span><span class="n">displacement</span><span class="o">*</span><span class="n">weight</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">Auto</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">lm_fit_int_1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>
+Call:
+lm(formula = mpg ~ cylinders * displacement + displacement * 
+    weight, data = Auto)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-13.2934  -2.5184  -0.3476   1.8399  17.7723 
+
+Coefficients:
+                         Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)             5.262e+01  2.237e+00  23.519  &lt; 2e-16 ***
+cylinders               7.606e-01  7.669e-01   0.992    0.322    
+displacement           -7.351e-02  1.669e-02  -4.403 1.38e-05 ***
+weight                 -9.888e-03  1.329e-03  -7.438 6.69e-13 ***
+cylinders:displacement -2.986e-03  3.426e-03  -0.872    0.384    
+displacement:weight     2.128e-05  5.002e-06   4.254 2.64e-05 ***
+---
+Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+
+Residual standard error: 4.103 on 386 degrees of freedom
+Multiple R-squared:  0.7272,	Adjusted R-squared:  0.7237 
+F-statistic: 205.8 on 5 and 386 DF,  p-value: &lt; 2.2e-16
+</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#27492;&#36852;&#27512;&#27169;&#22411;&#30340;&#35299;&#37323;&#35722;&#25976;&#21253;&#21547;displacement&#12289;weight&#12289;cylinders&#12290;">&#27492;&#36852;&#27512;&#27169;&#22411;&#30340;&#35299;&#37323;&#35722;&#25976;&#21253;&#21547;displacement&#12289;weight&#12289;cylinders&#12290;<a class="anchor-link" href="#&#27492;&#36852;&#27512;&#27169;&#22411;&#30340;&#35299;&#37323;&#35722;&#25976;&#21253;&#21547;displacement&#12289;weight&#12289;cylinders&#12290;">&#182;</a></h3><h3 id="displacement&#36319;weight&#30340;&#20132;&#20114;&#20316;&#29992;&#38917;&#30340;p-value&#36275;&#22816;&#23567;&#65292;&#21487;&#20197;&#25298;&#32085;&#34395;&#28961;&#20551;&#35373;&#65292;&#20063;&#23601;&#26159;&#35498;&#25793;&#26377;&#36275;&#22816;&#30340;&#35657;&#25818;&#39023;&#31034;&#20132;&#20114;&#20316;&#29992;&#38917;&#26159;&#39023;&#33879;&#30340;&#12290;">displacement&#36319;weight&#30340;&#20132;&#20114;&#20316;&#29992;&#38917;&#30340;p-value&#36275;&#22816;&#23567;&#65292;&#21487;&#20197;&#25298;&#32085;&#34395;&#28961;&#20551;&#35373;&#65292;&#20063;&#23601;&#26159;&#35498;&#25793;&#26377;&#36275;&#22816;&#30340;&#35657;&#25818;&#39023;&#31034;&#20132;&#20114;&#20316;&#29992;&#38917;&#26159;&#39023;&#33879;&#30340;&#12290;<a class="anchor-link" href="#displacement&#36319;weight&#30340;&#20132;&#20114;&#20316;&#29992;&#38917;&#30340;p-value&#36275;&#22816;&#23567;&#65292;&#21487;&#20197;&#25298;&#32085;&#34395;&#28961;&#20551;&#35373;&#65292;&#20063;&#23601;&#26159;&#35498;&#25793;&#26377;&#36275;&#22816;&#30340;&#35657;&#25818;&#39023;&#31034;&#20132;&#20114;&#20316;&#29992;&#38917;&#26159;&#39023;&#33879;&#30340;&#12290;">&#182;</a></h3><h3 id="displacement&#36319;cylinders&#30340;&#20132;&#20114;&#20316;&#29992;&#38917;&#30340;p-value&#22826;&#22823;&#65292;&#28961;&#27861;&#25298;&#32085;&#34395;&#28961;&#20551;&#35373;&#12290;">displacement&#36319;cylinders&#30340;&#20132;&#20114;&#20316;&#29992;&#38917;&#30340;p-value&#22826;&#22823;&#65292;&#28961;&#27861;&#25298;&#32085;&#34395;&#28961;&#20551;&#35373;&#12290;<a class="anchor-link" href="#displacement&#36319;cylinders&#30340;&#20132;&#20114;&#20316;&#29992;&#38917;&#30340;p-value&#22826;&#22823;&#65292;&#28961;&#27861;&#25298;&#32085;&#34395;&#28961;&#20551;&#35373;&#12290;">&#182;</a></h3>
 </div>
 </div>
 </div>
@@ -14071,7 +14195,7 @@ F-statistic: 252.4 on 7 and 384 DF,  p-value: &lt; 2.2e-16
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="c1">#固定亂數種子，讓你的模擬r結果能夠可重複出現</span>
@@ -14101,7 +14225,7 @@ F-statistic: 252.4 on 7 and 384 DF,  p-value: &lt; 2.2e-16
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -14268,7 +14392,7 @@ CCAkCCAkCCAkCCAkCCAkCPA/Hds5M0N9qAgAAAAASUVORK5CYII="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">lm_fit</span> <span class="o">=</span> <span class="nf">lm</span><span class="p">(</span><span class="n">y</span><span class="o">~</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">)</span> <span class="c1">#Perform regression without an interecept</span>
@@ -14323,48 +14447,6 @@ F-statistic: 511.6 on 2 and 97 DF,  p-value: &lt; 2.2e-16
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="According-to-the-summaary-result-above,-we-have&#65306;">According to the summaary result above, we have&#65306;<a class="anchor-link" href="#According-to-the-summaary-result-above,-we-have&#65306;">&#182;</a></h3><h3 id="$\hat{\beta}_0=5.0254$,-$\hat{\beta}_1=2.0211$,-and-$\hat{\beta}_2=2.9465$.">$\hat{\beta}_0=5.0254$, $\hat{\beta}_1=2.0211$, and $\hat{\beta}_2=2.9465$.<a class="anchor-link" href="#$\hat{\beta}_0=5.0254$,-$\hat{\beta}_1=2.0211$,-and-$\hat{\beta}_2=2.9465$.">&#182;</a></h3><h3 id="$se(\hat{\beta}_0)=5.0254$,-t-statistic-is-$47.77$-and-the-p-value-is-less-than-$2\times10^{-16}$.">$se(\hat{\beta}_0)=5.0254$, t-statistic is $47.77$ and the p-value is less than $2\times10^{-16}$.<a class="anchor-link" href="#$se(\hat{\beta}_0)=5.0254$,-t-statistic-is-$47.77$-and-the-p-value-is-less-than-$2\times10^{-16}$.">&#182;</a></h3><h3 id="$se(\hat{\beta}_1)=2.0211$,-t-statistic-is-$17.31$-and-the-p-value-is-less-than-$2\times10^{-16}$.">$se(\hat{\beta}_1)=2.0211$, t-statistic is $17.31$ and the p-value is less than $2\times10^{-16}$.<a class="anchor-link" href="#$se(\hat{\beta}_1)=2.0211$,-t-statistic-is-$17.31$-and-the-p-value-is-less-than-$2\times10^{-16}$.">&#182;</a></h3><h3 id="$se(\hat{\beta}_2)=2.9465$,-t-statistic-is-$26.91$-and-the-p-value-is-less-than-$2\times10^{-16}$.">$se(\hat{\beta}_2)=2.9465$, t-statistic is $26.91$ and the p-value is less than $2\times10^{-16}$.<a class="anchor-link" href="#$se(\hat{\beta}_2)=2.9465$,-t-statistic-is-$26.91$-and-the-p-value-is-less-than-$2\times10^{-16}$.">&#182;</a></h3><h3 id="Under-$\alpha=0.05$,--since-their-p-value-are-very-low-we-can-reject-$H_0:\beta_1-=-0$-and-$H_0:\beta_2-=-0$-so-that-$x1$-and-$x2$-are-highly-significant.">Under $\alpha=0.05$,  since their p-value are very low we can reject $H_0:\beta_1 = 0$ and $H_0:\beta_2 = 0$ so that $x1$ and $x2$ are highly significant.<a class="anchor-link" href="#Under-$\alpha=0.05$,--since-their-p-value-are-very-low-we-can-reject-$H_0:\beta_1-=-0$-and-$H_0:\beta_2-=-0$-so-that-$x1$-and-$x2$-are-highly-significant.">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-Test-1:"><font color="blue"> Test 1:</font><a class="anchor-link" href="#-Test-1:">&#182;</a></h3><h3 id="-(a.)-Perform-the-following-commands-in-R:"><font color="blue"> (a.)</font> Perform the following commands in R:<a class="anchor-link" href="#-(a.)-Perform-the-following-commands-in-R:">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="--set.seed(1)"><font color="green">  set.seed(1)</font><a class="anchor-link" href="#--set.seed(1)">&#182;</a></h4><h4 id="--x1=runif-(100)"><font color="green">  x1=runif (100)</font><a class="anchor-link" href="#--x1=runif-(100)">&#182;</a></h4><h4 id="--x2=0.5*x1+rnorm-(100)/10"><font color="green">  x2=0.5*x1+rnorm (100)/10</font><a class="anchor-link" href="#--x2=0.5*x1+rnorm-(100)/10">&#182;</a></h4><h4 id="--y=2+2*x1+0.3*x2+rnorm-(100)"><font color="green">  y=2+2*x1+0.3*x2+rnorm (100)</font><a class="anchor-link" href="#--y=2+2*x1+0.3*x2+rnorm-(100)">&#182;</a></h4>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="The-last-line-corresponds-to-creating-a-multiple-linear-model-in-which-$y$-is-a-function-of-$x1$-and-$x2$.-Write-out-the-form-of-the-multiple-linear-model.">The last line corresponds to creating a multiple linear model in which $y$ is a function of $x1$ and $x2$. Write out the form of the multiple linear model.<a class="anchor-link" href="#The-last-line-corresponds-to-creating-a-multiple-linear-model-in-which-$y$-is-a-function-of-$x1$-and-$x2$.-Write-out-the-form-of-the-multiple-linear-model.">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-(b.)-What-are-the-regression-coefficients?"><font color="blue"> (b.)</font> What are the regression coefficients?<a class="anchor-link" href="#-(b.)-What-are-the-regression-coefficients?">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-(c.)-Create-a-scatterplot-displaying-the-relationship-between-$x1$-and-$x2$.-Comment-on-what-you-observe."><font color="blue"> (c.)</font> Create a scatterplot displaying the relationship between $x1$ and $x2$. Comment on what you observe.<a class="anchor-link" href="#-(c.)-Create-a-scatterplot-displaying-the-relationship-between-$x1$-and-$x2$.-Comment-on-what-you-observe.">&#182;</a></h3>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="-(d.)-Using-this-data,-fit-a-least-squares-regression-to-predict-$y$-using-$x1$-and-$x2$.-Describe-the-results-obtained.-What-are-$\hat{\beta}_0$,-$\hat{\beta}_1$,-and-$\hat{\beta}_2$?-How-do-these-relate-to-the-true-$\beta_0$,-$\beta_1$,-and-$\beta_2$?-Can-you-reject-the-null-hypothesis-$H_0:\beta_1-=-0$?-How-about-the-null-hypothesis-$H_0:\beta_2-=-0$?-(You-can-use-the-command-by---$\textit{lm(y&#8764;x1+x2)}$-.)"><font color="blue"> (d.)</font> Using this data, fit a least squares regression to predict $y$ using $x1$ and $x2$. Describe the results obtained. What are $\hat{\beta}_0$, $\hat{\beta}_1$, and $\hat{\beta}_2$? How do these relate to the true $\beta_0$, $\beta_1$, and $\beta_2$? Can you reject the null hypothesis $H_0:\beta_1 = 0$? How about the null hypothesis $H_0:\beta_2 = 0$? (You can use the command by  <font color="red"> $\textit{lm(y&#8764;x1+x2)}$</font> .)<a class="anchor-link" href="#-(d.)-Using-this-data,-fit-a-least-squares-regression-to-predict-$y$-using-$x1$-and-$x2$.-Describe-the-results-obtained.-What-are-$\hat{\beta}_0$,-$\hat{\beta}_1$,-and-$\hat{\beta}_2$?-How-do-these-relate-to-the-true-$\beta_0$,-$\beta_1$,-and-$\beta_2$?-Can-you-reject-the-null-hypothesis-$H_0:\beta_1-=-0$?-How-about-the-null-hypothesis-$H_0:\beta_2-=-0$?-(You-can-use-the-command-by---$\textit{lm(y&#8764;x1+x2)}$-.)">&#182;</a></h3>
 </div>
 </div>
 </div>
