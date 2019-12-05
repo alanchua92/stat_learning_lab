@@ -13156,6 +13156,19 @@ div#notebook {
 </div>
 </div>
 
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">head</span><span class="p">(</span><span class="n">Auto</span><span class="p">)</span><span class="c1">#查看前六筆資料</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
 <div class="output_wrapper">
 <div class="output">
 
@@ -13165,10 +13178,26 @@ div#notebook {
     <div class="prompt"></div>
 
 
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>Warning message:
-&#34;package &#39;ISLR&#39; was built under R version 3.6.1&#34;</pre>
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<caption>A data.frame: 6 × 9</caption>
+<thead>
+	<tr><th scope=col>mpg</th><th scope=col>cylinders</th><th scope=col>displacement</th><th scope=col>horsepower</th><th scope=col>weight</th><th scope=col>acceleration</th><th scope=col>year</th><th scope=col>origin</th><th scope=col>name</th></tr>
+	<tr><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><td>18</td><td>8</td><td>307</td><td>130</td><td>3504</td><td>12.0</td><td>70</td><td>1</td><td>chevrolet chevelle malibu</td></tr>
+	<tr><td>15</td><td>8</td><td>350</td><td>165</td><td>3693</td><td>11.5</td><td>70</td><td>1</td><td>buick skylark 320        </td></tr>
+	<tr><td>18</td><td>8</td><td>318</td><td>150</td><td>3436</td><td>11.0</td><td>70</td><td>1</td><td>plymouth satellite       </td></tr>
+	<tr><td>16</td><td>8</td><td>304</td><td>150</td><td>3433</td><td>12.0</td><td>70</td><td>1</td><td>amc rebel sst            </td></tr>
+	<tr><td>17</td><td>8</td><td>302</td><td>140</td><td>3449</td><td>10.5</td><td>70</td><td>1</td><td>ford torino              </td></tr>
+	<tr><td>15</td><td>8</td><td>429</td><td>198</td><td>4341</td><td>10.0</td><td>70</td><td>1</td><td>ford galaxie 500         </td></tr>
+</tbody>
+</table>
+
 </div>
+
 </div>
 
 </div>
@@ -13177,7 +13206,59 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">Auto</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<ol class=list-inline>
+	<li>392</li>
+	<li>9</li>
+</ol>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="*-A-data-frame-with-392-observations-on-the-following-9-variables.">* A data frame with 392 observations on the following 9 variables.<a class="anchor-link" href="#*-A-data-frame-with-392-observations-on-the-following-9-variables.">&#182;</a></h3><h3 id="*-mpg">* mpg<a class="anchor-link" href="#*-mpg">&#182;</a></h3><h4>&emsp;miles per gallon(每加侖英里)</h4>
+<h3 id="*-cylinders">* cylinders<a class="anchor-link" href="#*-cylinders">&#182;</a></h3><h4>&emsp;Number of cylinders between 4 and 8(汽缸數在4到8之間)</h4>
+<h3 id="*-displacement">* displacement<a class="anchor-link" href="#*-displacement">&#182;</a></h3><h4>&emsp;Engine displacement (cu. inches)(發動機排量（立方英寸）)</h4>
+<h3 id="*-horsepower">* horsepower<a class="anchor-link" href="#*-horsepower">&#182;</a></h3><h4>&emsp;Engine horsepower(引擎馬力)</h4>
+<h3 id="*-weight">* weight<a class="anchor-link" href="#*-weight">&#182;</a></h3><h4>&emsp;Vehicle weight (lbs.)(車重（磅）)</h4>
+<h3 id="*-acceleration">* acceleration<a class="anchor-link" href="#*-acceleration">&#182;</a></h3><h4>&emsp;Time to accelerate from 0 to 60 mph (sec.)(從0加速到60 mph的時間)</h4>
+<h3 id="*-year">* year<a class="anchor-link" href="#*-year">&#182;</a></h3><h4>&emsp;Model year (modulo 100)(型號年份)</h4>
+<h3 id="*-origin">* origin<a class="anchor-link" href="#*-origin">&#182;</a></h3><h4>&emsp;Origin of car (1. American, 2. European, 3. Japanese)(汽車來源（1.美國，2。歐洲，3。日本）)</h4>
+<h3 id="*-name">* name<a class="anchor-link" href="#*-name">&#182;</a></h3><h4>&emsp;Vehicle name(車輛名稱)</h4>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">pairs</span><span class="p">(</span><span class="n">Auto</span><span class="p">)</span>
@@ -13865,7 +13946,7 @@ SUVORK5CYII="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">Auto</span><span class="p">)</span>
@@ -13908,7 +13989,7 @@ SUVORK5CYII="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">cor</span><span class="p">(</span><span class="n">Auto[1</span><span class="o">:</span><span class="m">8</span><span class="n">]</span><span class="p">)</span> <span class="c1">#排除掉qualitative varibale</span>
@@ -13963,7 +14044,7 @@ SUVORK5CYII="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">lm_fit_Auto</span> <span class="o">=</span> <span class="nf">lm</span><span class="p">(</span><span class="n">mpg</span><span class="o">~</span><span class="n">.-name</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">Auto</span><span class="p">)</span>
@@ -14042,7 +14123,7 @@ F-statistic: 252.4 on 7 and 384 DF,  p-value: &lt; 2.2e-16
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">lm_fit_int</span> <span class="o">=</span> <span class="nf">lm</span><span class="p">(</span><span class="n">mpg</span><span class="o">~</span><span class="n">cylinders</span><span class="o">:</span><span class="n">displacement</span><span class="o">+</span><span class="n">displacement</span><span class="o">:</span><span class="n">weight</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">Auto</span><span class="p">)</span>
@@ -14103,7 +14184,7 @@ F-statistic: 329.5 on 2 and 389 DF,  p-value: &lt; 2.2e-16
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">lm_fit_int_1</span> <span class="o">=</span> <span class="nf">lm</span><span class="p">(</span><span class="n">mpg</span><span class="o">~</span><span class="n">cylinders</span><span class="o">*</span><span class="n">displacement</span><span class="o">+</span><span class="n">displacement</span><span class="o">*</span><span class="n">weight</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">Auto</span><span class="p">)</span>
@@ -14195,10 +14276,10 @@ F-statistic: 205.8 on 5 and 386 DF,  p-value: &lt; 2.2e-16
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="c1">#固定亂數種子，讓你的模擬r結果能夠可重複出現</span>
+<div class=" highlight hl-r"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">1</span><span class="p">)</span> <span class="c1">#固定亂數種子，讓你的模擬結果能夠可重複出現</span>
 <span class="n">x1</span><span class="o">=</span><span class="nf">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">)</span> <span class="c1">#產生100個標準常態(N(0,1))的值當成一個解釋變數</span>
 <span class="n">x2</span><span class="o">=</span><span class="nf">rnorm</span><span class="p">(</span><span class="m">100</span><span class="p">)</span>
 <span class="n">y</span><span class="o">=</span><span class="m">5+2</span><span class="o">*</span><span class="n">x1</span><span class="m">+3</span><span class="o">*</span><span class="n">x2</span><span class="o">+</span><span class="nf">rnorm </span><span class="p">(</span><span class="m">100</span><span class="p">)</span> <span class="c1">#反應變數</span>
@@ -14225,7 +14306,7 @@ F-statistic: 205.8 on 5 and 386 DF,  p-value: &lt; 2.2e-16
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
@@ -14392,11 +14473,11 @@ CCAkCCAkCCAkCCAkCCAkCPA/Hds5M0N9qAgAAAAASUVORK5CYII="
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">lm_fit</span> <span class="o">=</span> <span class="nf">lm</span><span class="p">(</span><span class="n">y</span><span class="o">~</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">)</span> <span class="c1">#Perform regression without an interecept</span>
-<span class="nf">summary</span><span class="p">(</span><span class="n">lm_fit</span><span class="p">)</span> <span class="c1">#print the results</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">lm_fit</span> <span class="o">=</span> <span class="nf">lm</span><span class="p">(</span><span class="n">y</span><span class="o">~</span><span class="n">x1</span><span class="o">+</span><span class="n">x2</span><span class="p">)</span> 
+<span class="nf">summary</span><span class="p">(</span><span class="n">lm_fit</span><span class="p">)</span>
 </pre></div>
 
     </div>

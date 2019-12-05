@@ -45,28 +45,31 @@ seq(5,10,2)
 
 rep(c(1, 2, 3), times = 3, each = 2)
 
-matrix(5:8, nrow = 2, ncol = 2)
+matrix(5:8, nrow = 2, ncol = 2)#預設為依照column 填入資料
 
-x<-matrix(5:8, nrow = 2, ncol = 2, byrow = TRUE)
+x<-matrix(5:8, nrow = 2, ncol = 2, byrow = TRUE)#改成依照row 填入資料
 x
 
 x[1,2]
 
 x <- c(1, 2, 4, 3, 1, 2, 3, 4,1)
 
-factor(x)
+z<-factor(x)
+z
+z[3]>z[2]
 
-factor(x, ordered = TRUE)
+y<-factor(x, ordered = TRUE)
+y
+y[3]>y[2]
 
 name <- c("Joe", "Bob", "Vicky")
+class(name)
 
-age <- c("28", "26", "34")
+age <- c(28,26,24)
 
 gender <- c("Male","Male","Female")
 
 data <- data.frame(name, age, gender)
-
-data
 
 data[1,]
 
@@ -74,15 +77,13 @@ data[,3]
 
 summary(data)
 
-str(data)
-
 colnames(data)
 
 iris
 
 head(iris)
 
-plot(iris)
+pairs(iris)
 
 plot(iris$Sepal.Length,iris$Sepal.Width)
 
@@ -128,7 +129,7 @@ x <- 1
 y <- 0
 while (x <= 10) { # while 只要符合判斷式，就會一直重複執行括號內程式碼，直到不符合為止。
    y <- x + y
-  x <- x + 1 # 這行很重要，如果沒有這行，程式碼會一直執行不會停止，因為判斷式是 x 小於等於 10，x 初始值是 0，如果不對 x 做些動作，x 會一直小於等於 10，所以這邊加 1，是希望執行到 x = 11 時，迴圈就會停止。
+  x <- x + 1 # 這行很重要，如果沒有這行，程式碼會一直執行不會停止
  }
 y
 
