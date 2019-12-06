@@ -1,15 +1,15 @@
 
-# ¥u¨ú¥X virginica ©M versicolor
+# åªå–å‡º virginica å’Œ versicolor
 iris.small <- iris[iris$Species %in% c("versicolor","virginica"),]
 iris.small$Species=factor(iris.small$Species,level=c("versicolor","virginica"))
 
-# iris.small «e 5 µ§¸ê®Æ
+# iris.small å‰ 5 ç­†è³‡æ–™
 head(iris.small)
 
-# iris.small ªº columns name
+# iris.small çš„ columns name
 names(iris.small)
 
-# iris.small ¸ê®Æºû«×
+# iris.small è³‡æ–™ç¶­åº¦
 dim(iris.small)
 
 color_list=c("blue","red")
@@ -27,27 +27,12 @@ table(iris.small$Species,glm.pred)
 mean(iris.small$Species==glm.pred)
 
 library(RColorBrewer)
+library(gplots)
 cut_size=5
 #col_list=brewer.pal(n = cut_size, name = 'RdYlBu')
 col_list=colorpanel(cut_size, "Blue", "Red")
 cut_quant=quantile(glm.probs,seq(0,1,length.out = cut_size+1))
 pairs(iris.small[,-5],col=col_list[cut(glm.probs,breaks =cut_quant)],pch=c(16,17)[iris.small$Species])
-
-library (MASS)
-lda.fit=lda(Species~Sepal.Length+Sepal.Width+Petal.Length+Petal.Width,data=iris.small)
-lda.fit
-
-lda.pred=predict(lda.fit , iris.small)
-table(iris.small$Species,lda.pred$class)
-mean(iris.small$Species==lda.pred$class)
-
-library (MASS)
-qda.fit=qda(Species~Sepal.Length+Sepal.Width+Petal.Length+Petal.Width,data=iris.small)
-qda.fit
-
-qda.pred=predict(qda.fit , iris.small)
-table(iris.small$Species,qda.pred$class)
-mean(iris.small$Species==qda.pred$class)
 
 library(class)
 train.X=scale(iris.small[,-5])
