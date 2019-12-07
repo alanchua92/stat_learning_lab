@@ -3,34 +3,34 @@ x <- 5
 
 y <- 8
 
-x+y#åŠ 
+x+y#¥[
 
-x-y#æ¸›
+x-y#´î
 
-x*y#ä¹˜
+x*y#­¼
 
-x/y#é™¤
+x/y#°£
 
-x^y#æ¬¡æ–¹
+x^y#¦¸¤è
 
 x^y==x**y
 
-sqrt(x^2)#å¹³æ–¹æ ¹
+sqrt(x^2)#¥­¤è®Ú
 
-log10(3)# logä»¥10ç‚ºåº•
+log10(3)# log¥H10¬°©³
 
-log(3)# logä»¥eç‚ºåº•
+log(3)# log¥He¬°©³
 
 exp(3)
 
-y%/%x#å•†æ•¸
+y%/%x#°Ó¼Æ
 
-y%%x#é¤˜æ•¸
+y%%x#¾l¼Æ
 
 x<-c(1,2,3,4,5,6)
 x
 
-print(x)#æ‰“å°
+print(x)#¥´¦L
 
 y<-2:7
 y
@@ -39,37 +39,34 @@ x+y
 
 x*y
 
-x%*%y#å…§ç©
+x%*%y#¤º¿n
 
 seq(5,10,2)
 
 rep(c(1, 2, 3), times = 3, each = 2)
 
-matrix(5:8, nrow = 2, ncol = 2)#é è¨­ç‚ºä¾ç…§column å¡«å…¥è³‡æ–™
+matrix(5:8, nrow = 2, ncol = 2)
 
-x<-matrix(5:8, nrow = 2, ncol = 2, byrow = TRUE)#æ”¹æˆä¾ç…§row å¡«å…¥è³‡æ–™
+x<-matrix(5:8, nrow = 2, ncol = 2, byrow = TRUE)
 x
 
 x[1,2]
 
 x <- c(1, 2, 4, 3, 1, 2, 3, 4,1)
 
-z<-factor(x)
-z
-z[3]>z[2]
+factor(x)
 
-y<-factor(x, ordered = TRUE)
-y
-y[3]>y[2]
+factor(x, ordered = TRUE)
 
 name <- c("Joe", "Bob", "Vicky")
-class(name)
 
-age <- c(28,26,24)
+age <- c("28", "26", "34")
 
 gender <- c("Male","Male","Female")
 
 data <- data.frame(name, age, gender)
+
+data
 
 data[1,]
 
@@ -77,13 +74,15 @@ data[,3]
 
 summary(data)
 
+str(data)
+
 colnames(data)
 
 iris
 
 head(iris)
 
-pairs(iris)
+plot(iris)
 
 plot(iris$Sepal.Length,iris$Sepal.Width)
 
@@ -94,11 +93,11 @@ x>y
 
 x<=y
 
-x!=y#ä¸ç­‰æ–¼
+x!=y#¤£µ¥©ó
 
 a<-c(1,2,3,4,5)
-a>0 & a>6 #äº¤é›†
-a>0 | a>6 #äº¤é›†
+a>0 & a>6 #¥æ¶°
+a>0 | a>6 #¥æ¶°
 
 x <- 1
 if (x > 0) {
@@ -127,10 +126,40 @@ y
 
 x <- 1
 y <- 0
-while (x <= 10) { # while åªè¦ç¬¦åˆåˆ¤æ–·å¼ï¼Œå°±æœƒä¸€ç›´é‡è¤‡åŸ·è¡Œæ‹¬è™Ÿå…§ç¨‹å¼ç¢¼ï¼Œç›´åˆ°ä¸ç¬¦åˆç‚ºæ­¢ã€‚
+while (x <= 10) { # while ¥u­n²Å¦X§PÂ_¦¡¡A´N·|¤@ª½­«½Æ°õ¦æ¬A¸¹¤ºµ{¦¡½X¡Aª½¨ì¤£²Å¦X¬°¤î¡C
    y <- x + y
-  x <- x + 1 # é€™è¡Œå¾ˆé‡è¦ï¼Œå¦‚æžœæ²’æœ‰é€™è¡Œï¼Œç¨‹å¼ç¢¼æœƒä¸€ç›´åŸ·è¡Œä¸æœƒåœæ­¢
+  x <- x + 1 # ³o¦æ«Ü­«­n¡A¦pªG¨S¦³³o¦æ¡Aµ{¦¡½X·|¤@ª½°õ¦æ¤£·|°±¤î¡A¦]¬°§PÂ_¦¡¬O x ¤p©óµ¥©ó 10¡Ax ªì©l­È¬O 0¡A¦pªG¤£¹ï x °µ¨Ç°Ê§@¡Ax ·|¤@ª½¤p©óµ¥©ó 10¡A©Ò¥H³oÃä¥[ 1¡A¬O§Æ±æ°õ¦æ¨ì x = 11 ®É¡A°j°é´N·|°±¤î¡C
  }
 y
 
 ?matrix
+
+x <- c(1,2,3)
+length(x)
+
+x<-rnorm(50)
+
+x
+
+mean(x)
+sd(x)
+
+set.seed(123)
+x<-rnorm(50)
+y<-rnorm(50)
+z<-rnorm(50)
+data_xyz<-data.frame(x,y,z)
+
+head(data_xyz)
+
+install.packages("ISLR")
+
+library("ISLR")
+
+head(Auto)
+
+summary(Auto)
+
+pairs(Auto)
+
+
