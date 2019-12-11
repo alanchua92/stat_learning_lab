@@ -1,7 +1,6 @@
-
 library(ISLR)
 set.seed(1)
-train=sample(392 ,196)
+train=sample(1:392 ,196)
 poly_validation_error=rep(0,5);
 mpg=Auto$mpg
 for(i in 1:5){
@@ -15,7 +14,7 @@ plot(1:5,poly_validation_error,xlab="polynomial order",ylab="validation error",t
 library(ISLR)
 for(tmp_seed in 1:20){
     set.seed(tmp_seed)
-    train=sample(392 ,196)
+    train=sample(1:392 ,196)
     poly_validation_error=rep(0,5);
     mpg=Auto$mpg
     for(i in 1:5){
@@ -63,3 +62,15 @@ for(tmp_seed in 1:20){
         lines(1:5,k.cv.err,col="grey")
     }
 }
+
+require(e1071)
+set.seed(1)
+obj <- tune(svm, Species~., data = iris, 
+          ranges = list(gamma = 2^(-4:1), cost = 2^(1:5)),kernel="radial")
+summary(obj)
+plot(obj)
+
+m_svm<-svm(Species~., data = iris,gamma=0.625,cost=2,kernel="radial")
+svm_pred=predict(m_svm)
+table(iris$Species,svm_pred)
+mean(iris$Species==svm_pred)
