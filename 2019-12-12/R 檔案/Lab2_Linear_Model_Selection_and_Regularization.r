@@ -70,3 +70,5 @@ lasso.coef
 out=glmnet(x,y,alpha =1, lambda =grid)
 lasso.coef=predict(out ,type ="coefficients",s=bestlam)[1:20 ,]
 lasso.coef
+
+
