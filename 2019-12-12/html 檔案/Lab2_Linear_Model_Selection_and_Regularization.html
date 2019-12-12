@@ -13101,7 +13101,7 @@ div#notebook {
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">data</span><span class="p">(</span><span class="n">Hitters</span><span class="p">)</span> <span class="c1">#取出資料</span>
-<span class="nf">head</span><span class="p">(</span><span class="n">Hitters</span><span class="p">)</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">Hitters</span><span class="p">)</span> <span class="c1">#看資料的前幾筆</span>
 </pre></div>
 
     </div>
@@ -13148,7 +13148,7 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="o">?</span><span class="n">Hitters</span>
+<div class=" highlight hl-r"><pre><span></span><span class="o">?</span><span class="n">Hitters</span> <span class="c1">#可以詳細了解這筆資料的每個變數</span>
 </pre></div>
 
     </div>
@@ -13158,7 +13158,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">Hitters</span><span class="p">)</span> <span class="c1">#看資料的欄位名稱</span>
@@ -13212,7 +13212,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">Hitters</span><span class="p">)</span> <span class="c1">#看資料的行、列數</span>
@@ -13248,7 +13248,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">Hitters</span> <span class="o">=</span> <span class="nf">na.omit</span><span class="p">(</span><span class="n">Hitters</span><span class="p">)</span> <span class="c1">#將資料中有缺失值的列刪除</span>
@@ -13261,7 +13261,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">Hitters</span><span class="p">)</span> <span class="c1">#刪除缺失值後重新查看資料的行、列數</span>
@@ -13297,7 +13297,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">sum</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">Hitters</span> <span class="p">))</span> <span class="c1">#檢查是否還有缺失值尚未刪除</span>
@@ -13339,7 +13339,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># install.packages(&quot;leaps&quot;)</span>
@@ -13353,13 +13353,186 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">regfit.full</span><span class="o">=</span><span class="nf">regsubsets</span><span class="p">(</span><span class="n">Salary</span><span class="o">~</span><span class="n">.,data</span><span class="o">=</span><span class="n">Hitters</span> <span class="p">,</span><span class="n">nvmax</span> <span class="o">=</span><span class="m">19</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">regfit.full</span><span class="o">=</span><span class="nf">regsubsets</span><span class="p">(</span><span class="n">Salary</span><span class="o">~</span><span class="n">.,data</span><span class="o">=</span><span class="n">Hitters</span> <span class="p">,</span><span class="n">nvmax</span> <span class="o">=</span><span class="m">8</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="nf">summary</span><span class="p">(</span><span class="n">regfit.full</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>Subset selection object
+Call: regsubsets.formula(Salary ~ ., data = Hitters, nvmax = 8)
+19 Variables  (and intercept)
+           Forced in Forced out
+AtBat          FALSE      FALSE
+Hits           FALSE      FALSE
+HmRun          FALSE      FALSE
+Runs           FALSE      FALSE
+RBI            FALSE      FALSE
+Walks          FALSE      FALSE
+Years          FALSE      FALSE
+CAtBat         FALSE      FALSE
+CHits          FALSE      FALSE
+CHmRun         FALSE      FALSE
+CRuns          FALSE      FALSE
+CRBI           FALSE      FALSE
+CWalks         FALSE      FALSE
+LeagueN        FALSE      FALSE
+DivisionW      FALSE      FALSE
+PutOuts        FALSE      FALSE
+Assists        FALSE      FALSE
+Errors         FALSE      FALSE
+NewLeagueN     FALSE      FALSE
+1 subsets of each size up to 8
+Selection Algorithm: exhaustive
+         AtBat Hits HmRun Runs RBI Walks Years CAtBat CHits CHmRun CRuns CRBI
+1  ( 1 ) &#34; &#34;   &#34; &#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34; &#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34; 
+2  ( 1 ) &#34; &#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34; &#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34; 
+3  ( 1 ) &#34; &#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34; &#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34; 
+4  ( 1 ) &#34; &#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34; &#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34; 
+5  ( 1 ) &#34;*&#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34; &#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34; 
+6  ( 1 ) &#34;*&#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34;*&#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34; 
+7  ( 1 ) &#34; &#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34;*&#34;   &#34; &#34;   &#34;*&#34;    &#34;*&#34;   &#34;*&#34;    &#34; &#34;   &#34; &#34; 
+8  ( 1 ) &#34;*&#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34;*&#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34;    &#34;*&#34;   &#34; &#34; 
+         CWalks LeagueN DivisionW PutOuts Assists Errors NewLeagueN
+1  ( 1 ) &#34; &#34;    &#34; &#34;     &#34; &#34;       &#34; &#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+2  ( 1 ) &#34; &#34;    &#34; &#34;     &#34; &#34;       &#34; &#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+3  ( 1 ) &#34; &#34;    &#34; &#34;     &#34; &#34;       &#34;*&#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+4  ( 1 ) &#34; &#34;    &#34; &#34;     &#34;*&#34;       &#34;*&#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+5  ( 1 ) &#34; &#34;    &#34; &#34;     &#34;*&#34;       &#34;*&#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+6  ( 1 ) &#34; &#34;    &#34; &#34;     &#34;*&#34;       &#34;*&#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+7  ( 1 ) &#34; &#34;    &#34; &#34;     &#34;*&#34;       &#34;*&#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+8  ( 1 ) &#34;*&#34;    &#34; &#34;     &#34;*&#34;       &#34;*&#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       </pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="n">regfit.full_1</span><span class="o">=</span><span class="nf">regsubsets</span><span class="p">(</span><span class="n">Salary</span><span class="o">~</span><span class="n">.,data</span><span class="o">=</span><span class="n">Hitters</span> <span class="p">,</span><span class="n">nvmax</span> <span class="o">=</span><span class="m">19</span><span class="p">)</span>
+<span class="nf">summary</span><span class="p">(</span><span class="n">regfit.full_1</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>Subset selection object
+Call: regsubsets.formula(Salary ~ ., data = Hitters, nvmax = 19)
+19 Variables  (and intercept)
+           Forced in Forced out
+AtBat          FALSE      FALSE
+Hits           FALSE      FALSE
+HmRun          FALSE      FALSE
+Runs           FALSE      FALSE
+RBI            FALSE      FALSE
+Walks          FALSE      FALSE
+Years          FALSE      FALSE
+CAtBat         FALSE      FALSE
+CHits          FALSE      FALSE
+CHmRun         FALSE      FALSE
+CRuns          FALSE      FALSE
+CRBI           FALSE      FALSE
+CWalks         FALSE      FALSE
+LeagueN        FALSE      FALSE
+DivisionW      FALSE      FALSE
+PutOuts        FALSE      FALSE
+Assists        FALSE      FALSE
+Errors         FALSE      FALSE
+NewLeagueN     FALSE      FALSE
+1 subsets of each size up to 19
+Selection Algorithm: exhaustive
+          AtBat Hits HmRun Runs RBI Walks Years CAtBat CHits CHmRun CRuns CRBI
+1  ( 1 )  &#34; &#34;   &#34; &#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34; &#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34; 
+2  ( 1 )  &#34; &#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34; &#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34; 
+3  ( 1 )  &#34; &#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34; &#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34; 
+4  ( 1 )  &#34; &#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34; &#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34; 
+5  ( 1 )  &#34;*&#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34; &#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34; 
+6  ( 1 )  &#34;*&#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34;*&#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34; 
+7  ( 1 )  &#34; &#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34;*&#34;   &#34; &#34;   &#34;*&#34;    &#34;*&#34;   &#34;*&#34;    &#34; &#34;   &#34; &#34; 
+8  ( 1 )  &#34;*&#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34;*&#34;   &#34; &#34;   &#34; &#34;    &#34; &#34;   &#34;*&#34;    &#34;*&#34;   &#34; &#34; 
+9  ( 1 )  &#34;*&#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34;*&#34;   &#34; &#34;   &#34;*&#34;    &#34; &#34;   &#34; &#34;    &#34;*&#34;   &#34;*&#34; 
+10  ( 1 ) &#34;*&#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34;*&#34;   &#34; &#34;   &#34;*&#34;    &#34; &#34;   &#34; &#34;    &#34;*&#34;   &#34;*&#34; 
+11  ( 1 ) &#34;*&#34;   &#34;*&#34;  &#34; &#34;   &#34; &#34;  &#34; &#34; &#34;*&#34;   &#34; &#34;   &#34;*&#34;    &#34; &#34;   &#34; &#34;    &#34;*&#34;   &#34;*&#34; 
+12  ( 1 ) &#34;*&#34;   &#34;*&#34;  &#34; &#34;   &#34;*&#34;  &#34; &#34; &#34;*&#34;   &#34; &#34;   &#34;*&#34;    &#34; &#34;   &#34; &#34;    &#34;*&#34;   &#34;*&#34; 
+13  ( 1 ) &#34;*&#34;   &#34;*&#34;  &#34; &#34;   &#34;*&#34;  &#34; &#34; &#34;*&#34;   &#34; &#34;   &#34;*&#34;    &#34; &#34;   &#34; &#34;    &#34;*&#34;   &#34;*&#34; 
+14  ( 1 ) &#34;*&#34;   &#34;*&#34;  &#34;*&#34;   &#34;*&#34;  &#34; &#34; &#34;*&#34;   &#34; &#34;   &#34;*&#34;    &#34; &#34;   &#34; &#34;    &#34;*&#34;   &#34;*&#34; 
+15  ( 1 ) &#34;*&#34;   &#34;*&#34;  &#34;*&#34;   &#34;*&#34;  &#34; &#34; &#34;*&#34;   &#34; &#34;   &#34;*&#34;    &#34;*&#34;   &#34; &#34;    &#34;*&#34;   &#34;*&#34; 
+16  ( 1 ) &#34;*&#34;   &#34;*&#34;  &#34;*&#34;   &#34;*&#34;  &#34;*&#34; &#34;*&#34;   &#34; &#34;   &#34;*&#34;    &#34;*&#34;   &#34; &#34;    &#34;*&#34;   &#34;*&#34; 
+17  ( 1 ) &#34;*&#34;   &#34;*&#34;  &#34;*&#34;   &#34;*&#34;  &#34;*&#34; &#34;*&#34;   &#34; &#34;   &#34;*&#34;    &#34;*&#34;   &#34; &#34;    &#34;*&#34;   &#34;*&#34; 
+18  ( 1 ) &#34;*&#34;   &#34;*&#34;  &#34;*&#34;   &#34;*&#34;  &#34;*&#34; &#34;*&#34;   &#34;*&#34;   &#34;*&#34;    &#34;*&#34;   &#34; &#34;    &#34;*&#34;   &#34;*&#34; 
+19  ( 1 ) &#34;*&#34;   &#34;*&#34;  &#34;*&#34;   &#34;*&#34;  &#34;*&#34; &#34;*&#34;   &#34;*&#34;   &#34;*&#34;    &#34;*&#34;   &#34;*&#34;    &#34;*&#34;   &#34;*&#34; 
+          CWalks LeagueN DivisionW PutOuts Assists Errors NewLeagueN
+1  ( 1 )  &#34; &#34;    &#34; &#34;     &#34; &#34;       &#34; &#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+2  ( 1 )  &#34; &#34;    &#34; &#34;     &#34; &#34;       &#34; &#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+3  ( 1 )  &#34; &#34;    &#34; &#34;     &#34; &#34;       &#34;*&#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+4  ( 1 )  &#34; &#34;    &#34; &#34;     &#34;*&#34;       &#34;*&#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+5  ( 1 )  &#34; &#34;    &#34; &#34;     &#34;*&#34;       &#34;*&#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+6  ( 1 )  &#34; &#34;    &#34; &#34;     &#34;*&#34;       &#34;*&#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+7  ( 1 )  &#34; &#34;    &#34; &#34;     &#34;*&#34;       &#34;*&#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+8  ( 1 )  &#34;*&#34;    &#34; &#34;     &#34;*&#34;       &#34;*&#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+9  ( 1 )  &#34;*&#34;    &#34; &#34;     &#34;*&#34;       &#34;*&#34;     &#34; &#34;     &#34; &#34;    &#34; &#34;       
+10  ( 1 ) &#34;*&#34;    &#34; &#34;     &#34;*&#34;       &#34;*&#34;     &#34;*&#34;     &#34; &#34;    &#34; &#34;       
+11  ( 1 ) &#34;*&#34;    &#34;*&#34;     &#34;*&#34;       &#34;*&#34;     &#34;*&#34;     &#34; &#34;    &#34; &#34;       
+12  ( 1 ) &#34;*&#34;    &#34;*&#34;     &#34;*&#34;       &#34;*&#34;     &#34;*&#34;     &#34; &#34;    &#34; &#34;       
+13  ( 1 ) &#34;*&#34;    &#34;*&#34;     &#34;*&#34;       &#34;*&#34;     &#34;*&#34;     &#34;*&#34;    &#34; &#34;       
+14  ( 1 ) &#34;*&#34;    &#34;*&#34;     &#34;*&#34;       &#34;*&#34;     &#34;*&#34;     &#34;*&#34;    &#34; &#34;       
+15  ( 1 ) &#34;*&#34;    &#34;*&#34;     &#34;*&#34;       &#34;*&#34;     &#34;*&#34;     &#34;*&#34;    &#34; &#34;       
+16  ( 1 ) &#34;*&#34;    &#34;*&#34;     &#34;*&#34;       &#34;*&#34;     &#34;*&#34;     &#34;*&#34;    &#34; &#34;       
+17  ( 1 ) &#34;*&#34;    &#34;*&#34;     &#34;*&#34;       &#34;*&#34;     &#34;*&#34;     &#34;*&#34;    &#34;*&#34;       
+18  ( 1 ) &#34;*&#34;    &#34;*&#34;     &#34;*&#34;       &#34;*&#34;     &#34;*&#34;     &#34;*&#34;    &#34;*&#34;       
+19  ( 1 ) &#34;*&#34;    &#34;*&#34;     &#34;*&#34;       &#34;*&#34;     &#34;*&#34;     &#34;*&#34;    &#34;*&#34;       </pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -13374,10 +13547,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">reg.summary</span><span class="o">=</span><span class="nf">summary</span><span class="p">(</span><span class="n">regfit.full</span><span class="p">)</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">reg.summary_1</span><span class="o">=</span><span class="nf">summary</span><span class="p">(</span><span class="n">regfit.full_1</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13395,10 +13568,10 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">reg.summary</span><span class="o">$</span><span class="n">adjr2</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">reg.summary_1</span><span class="o">$</span><span class="n">adjr2</span>
 </pre></div>
 
     </div>
@@ -13456,22 +13629,22 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span> <span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>
 
-<span class="nf">plot</span><span class="p">(</span><span class="n">reg.summary</span><span class="o">$</span><span class="n">rss</span> <span class="p">,</span><span class="n">xlab</span><span class="o">=</span><span class="s">&quot; Number of Variables &quot;</span><span class="p">,</span><span class="n">ylab</span><span class="o">=</span><span class="s">&quot; RSS&quot;</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s">&quot;l&quot;</span><span class="p">)</span>
-<span class="nf">points</span><span class="p">(</span><span class="nf">which.min</span><span class="p">(</span><span class="n">reg.summary</span><span class="o">$</span><span class="n">rss</span><span class="p">),</span> <span class="n">reg.summary</span><span class="o">$</span><span class="n">rss</span><span class="nf">[which.min</span><span class="p">(</span><span class="n">reg.summary</span><span class="o">$</span><span class="n">rss</span><span class="p">)</span><span class="n">]</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="n">cex</span> <span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">pch</span> <span class="o">=</span><span class="m">20</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">reg.summary_1</span><span class="o">$</span><span class="n">rss</span> <span class="p">,</span><span class="n">xlab</span><span class="o">=</span><span class="s">&quot; Number of Variables &quot;</span><span class="p">,</span><span class="n">ylab</span><span class="o">=</span><span class="s">&quot; RSS&quot;</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s">&quot;l&quot;</span><span class="p">)</span>
+<span class="nf">points</span><span class="p">(</span><span class="nf">which.min</span><span class="p">(</span><span class="n">reg.summary_1</span><span class="o">$</span><span class="n">rss</span><span class="p">),</span> <span class="n">reg.summary_1</span><span class="o">$</span><span class="n">rss</span><span class="nf">[which.min</span><span class="p">(</span><span class="n">reg.summary_1</span><span class="o">$</span><span class="n">rss</span><span class="p">)</span><span class="n">]</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="n">cex</span> <span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">pch</span> <span class="o">=</span><span class="m">20</span><span class="p">)</span>
 
-<span class="nf">plot</span><span class="p">(</span><span class="n">reg.summary</span><span class="o">$</span><span class="n">adjr2</span> <span class="p">,</span><span class="n">xlab</span> <span class="o">=</span><span class="s">&quot; Number of Variables &quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot; Adjusted RSq&quot;</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s">&quot;l&quot;</span><span class="p">)</span>
-<span class="nf">points</span><span class="p">(</span><span class="nf">which.max</span><span class="p">(</span><span class="n">reg.summary</span><span class="o">$</span><span class="n">adjr2</span><span class="p">),</span> <span class="n">reg.summary</span><span class="o">$</span><span class="n">adjr2</span><span class="nf">[which.max</span><span class="p">(</span><span class="n">reg.summary</span><span class="o">$</span><span class="n">adjr2</span><span class="p">)</span><span class="n">]</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="n">cex</span> <span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">pch</span> <span class="o">=</span><span class="m">20</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">reg.summary_1</span><span class="o">$</span><span class="n">adjr2</span> <span class="p">,</span><span class="n">xlab</span> <span class="o">=</span><span class="s">&quot; Number of Variables &quot;</span><span class="p">,</span> <span class="n">ylab</span><span class="o">=</span><span class="s">&quot; Adjusted RSq&quot;</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s">&quot;l&quot;</span><span class="p">)</span>
+<span class="nf">points</span><span class="p">(</span><span class="nf">which.max</span><span class="p">(</span><span class="n">reg.summary_1</span><span class="o">$</span><span class="n">adjr2</span><span class="p">),</span> <span class="n">reg.summary_1</span><span class="o">$</span><span class="n">adjr2</span><span class="nf">[which.max</span><span class="p">(</span><span class="n">reg.summary_1</span><span class="o">$</span><span class="n">adjr2</span><span class="p">)</span><span class="n">]</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="n">cex</span> <span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">pch</span> <span class="o">=</span><span class="m">20</span><span class="p">)</span>
 
-<span class="nf">plot</span><span class="p">(</span><span class="n">reg.summary</span><span class="o">$</span><span class="n">cp</span> <span class="p">,</span><span class="n">xlab</span> <span class="o">=</span><span class="s">&quot;Number of Variables&quot;</span><span class="p">,</span><span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Cp&quot;</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s">&#39;l&#39;</span><span class="p">)</span>
-<span class="nf">points</span><span class="p">(</span><span class="nf">which.min</span><span class="p">(</span><span class="n">reg.summary</span><span class="o">$</span><span class="n">cp</span><span class="p">),</span> <span class="n">reg.summary</span><span class="o">$</span><span class="n">cp</span><span class="nf">[which.min</span><span class="p">(</span><span class="n">reg.summary</span><span class="o">$</span><span class="n">cp</span><span class="p">)</span><span class="n">]</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="n">cex</span> <span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">pch</span> <span class="o">=</span><span class="m">20</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">reg.summary_1</span><span class="o">$</span><span class="n">cp</span> <span class="p">,</span><span class="n">xlab</span> <span class="o">=</span><span class="s">&quot;Number of Variables&quot;</span><span class="p">,</span><span class="n">ylab</span><span class="o">=</span><span class="s">&quot;Cp&quot;</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s">&#39;l&#39;</span><span class="p">)</span>
+<span class="nf">points</span><span class="p">(</span><span class="nf">which.min</span><span class="p">(</span><span class="n">reg.summary_1</span><span class="o">$</span><span class="n">cp</span><span class="p">),</span> <span class="n">reg.summary_1</span><span class="o">$</span><span class="n">cp</span><span class="nf">[which.min</span><span class="p">(</span><span class="n">reg.summary_1</span><span class="o">$</span><span class="n">cp</span><span class="p">)</span><span class="n">]</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="n">cex</span> <span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">pch</span> <span class="o">=</span><span class="m">20</span><span class="p">)</span>
 
-<span class="nf">plot</span><span class="p">(</span><span class="n">reg.summary</span><span class="o">$</span><span class="n">bic</span> <span class="p">,</span><span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Number of Variables&quot;</span><span class="p">,</span><span class="n">ylab</span><span class="o">=</span><span class="s">&quot; BIC&quot;</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s">&#39;l&#39;</span><span class="p">)</span>
-<span class="nf">points</span><span class="p">(</span><span class="nf">which.min</span><span class="p">(</span><span class="n">reg.summary</span><span class="o">$</span><span class="n">bic</span><span class="p">),</span> <span class="n">reg.summary</span><span class="o">$</span><span class="n">bic</span><span class="nf">[which.min</span><span class="p">(</span><span class="n">reg.summary</span><span class="o">$</span><span class="n">bic</span><span class="p">)</span><span class="n">]</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span><span class="s">&quot; red&quot;</span><span class="p">,</span><span class="n">cex</span> <span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">pch</span> <span class="o">=</span><span class="m">20</span><span class="p">)</span>
+<span class="nf">plot</span><span class="p">(</span><span class="n">reg.summary_1</span><span class="o">$</span><span class="n">bic</span> <span class="p">,</span><span class="n">xlab</span><span class="o">=</span><span class="s">&quot;Number of Variables&quot;</span><span class="p">,</span><span class="n">ylab</span><span class="o">=</span><span class="s">&quot; BIC&quot;</span><span class="p">,</span><span class="n">type</span><span class="o">=</span><span class="s">&#39;l&#39;</span><span class="p">)</span>
+<span class="nf">points</span><span class="p">(</span><span class="nf">which.min</span><span class="p">(</span><span class="n">reg.summary_1</span><span class="o">$</span><span class="n">bic</span><span class="p">),</span> <span class="n">reg.summary_1</span><span class="o">$</span><span class="n">bic</span><span class="nf">[which.min</span><span class="p">(</span><span class="n">reg.summary_1</span><span class="o">$</span><span class="n">bic</span><span class="p">)</span><span class="n">]</span><span class="p">,</span> <span class="n">col</span> <span class="o">=</span><span class="s">&quot; red&quot;</span><span class="p">,</span><span class="n">cex</span> <span class="o">=</span><span class="m">2</span><span class="p">,</span> <span class="n">pch</span> <span class="o">=</span><span class="m">20</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -16128,20 +16301,20 @@ AAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIJAMgf8P
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>用全部的x資料集重新建立The Lasso模型，並代入藉由cross validation所選出的lambda得到模型的係數</p>
+<p>用全部的x資料集重新建立The Lasso模型，其中x的變數是利用cv.glmnet所選出的變數</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">x_new</span><span class="o">=</span><span class="n">x[</span><span class="p">,</span><span class="nf">names</span><span class="p">(</span><span class="n">lasso.coef[lasso.coef</span><span class="o">!=</span><span class="m">0</span><span class="n">]</span><span class="p">)</span><span class="n">[</span><span class="m">-1</span><span class="n">]]</span>
 <span class="n">out</span><span class="o">=</span><span class="nf">glmnet</span><span class="p">(</span><span class="n">x_new</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">alpha</span> <span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="n">lambda</span> <span class="o">=</span><span class="m">0</span><span class="p">)</span>
-<span class="n">lasso.coef</span><span class="o">=</span><span class="nf">predict</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="n">newx</span><span class="o">=</span><span class="n">x_new</span><span class="p">)</span>
-<span class="n">lasso.coef</span>
+<span class="n">lasso.coef_1</span><span class="o">=</span><span class="nf">predict</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="n">newx</span><span class="o">=</span><span class="n">x_new</span><span class="p">)</span>
+<span class="n">lasso.coef_1</span>
 </pre></div>
 
     </div>
