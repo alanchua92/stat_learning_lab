@@ -13083,7 +13083,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># install.packages(&quot;ISLR&quot;)</span>
@@ -13097,10 +13097,58 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">data</span><span class="p">(</span><span class="n">Hitters</span><span class="p">)</span> <span class="c1">#取出資料</span>
+<span class="nf">head</span><span class="p">(</span><span class="n">Hitters</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+<div class="output_html rendered_html output_subarea ">
+<table>
+<caption>A data.frame: 6 × 20</caption>
+<thead>
+	<tr><th></th><th scope=col>AtBat</th><th scope=col>Hits</th><th scope=col>HmRun</th><th scope=col>Runs</th><th scope=col>RBI</th><th scope=col>Walks</th><th scope=col>Years</th><th scope=col>CAtBat</th><th scope=col>CHits</th><th scope=col>CHmRun</th><th scope=col>CRuns</th><th scope=col>CRBI</th><th scope=col>CWalks</th><th scope=col>League</th><th scope=col>Division</th><th scope=col>PutOuts</th><th scope=col>Assists</th><th scope=col>Errors</th><th scope=col>Salary</th><th scope=col>NewLeague</th></tr>
+	<tr><th></th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;fct&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;int&gt;</th><th scope=col>&lt;dbl&gt;</th><th scope=col>&lt;fct&gt;</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>-Andy Allanson</th><td>293</td><td> 66</td><td> 1</td><td>30</td><td>29</td><td>14</td><td> 1</td><td> 293</td><td>  66</td><td>  1</td><td> 30</td><td> 29</td><td> 14</td><td>A</td><td>E</td><td>446</td><td> 33</td><td>20</td><td>   NA</td><td>A</td></tr>
+	<tr><th scope=row>-Alan Ashby</th><td>315</td><td> 81</td><td> 7</td><td>24</td><td>38</td><td>39</td><td>14</td><td>3449</td><td> 835</td><td> 69</td><td>321</td><td>414</td><td>375</td><td>N</td><td>W</td><td>632</td><td> 43</td><td>10</td><td>475.0</td><td>N</td></tr>
+	<tr><th scope=row>-Alvin Davis</th><td>479</td><td>130</td><td>18</td><td>66</td><td>72</td><td>76</td><td> 3</td><td>1624</td><td> 457</td><td> 63</td><td>224</td><td>266</td><td>263</td><td>A</td><td>W</td><td>880</td><td> 82</td><td>14</td><td>480.0</td><td>A</td></tr>
+	<tr><th scope=row>-Andre Dawson</th><td>496</td><td>141</td><td>20</td><td>65</td><td>78</td><td>37</td><td>11</td><td>5628</td><td>1575</td><td>225</td><td>828</td><td>838</td><td>354</td><td>N</td><td>E</td><td>200</td><td> 11</td><td> 3</td><td>500.0</td><td>N</td></tr>
+	<tr><th scope=row>-Andres Galarraga</th><td>321</td><td> 87</td><td>10</td><td>39</td><td>42</td><td>30</td><td> 2</td><td> 396</td><td> 101</td><td> 12</td><td> 48</td><td> 46</td><td> 33</td><td>N</td><td>E</td><td>805</td><td> 40</td><td> 4</td><td> 91.5</td><td>N</td></tr>
+	<tr><th scope=row>-Alfredo Griffin</th><td>594</td><td>169</td><td> 4</td><td>74</td><td>51</td><td>35</td><td>11</td><td>4408</td><td>1133</td><td> 19</td><td>501</td><td>336</td><td>194</td><td>A</td><td>W</td><td>282</td><td>421</td><td>25</td><td>750.0</td><td>A</td></tr>
+</tbody>
+</table>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-r"><pre><span></span><span class="o">?</span><span class="n">Hitters</span>
 </pre></div>
 
     </div>
@@ -13110,7 +13158,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">names</span><span class="p">(</span><span class="n">Hitters</span><span class="p">)</span> <span class="c1">#看資料的欄位名稱</span>
@@ -13164,7 +13212,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">Hitters</span><span class="p">)</span> <span class="c1">#看資料的行、列數</span>
@@ -13200,7 +13248,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">Hitters</span> <span class="o">=</span> <span class="nf">na.omit</span><span class="p">(</span><span class="n">Hitters</span><span class="p">)</span> <span class="c1">#將資料中有缺失值的列刪除</span>
@@ -13213,7 +13261,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">dim</span><span class="p">(</span><span class="n">Hitters</span><span class="p">)</span> <span class="c1">#刪除缺失值後重新查看資料的行、列數</span>
@@ -13249,7 +13297,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">sum</span><span class="p">(</span><span class="nf">is.na</span><span class="p">(</span><span class="n">Hitters</span> <span class="p">))</span> <span class="c1">#檢查是否還有缺失值尚未刪除</span>
@@ -13291,7 +13339,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># install.packages(&quot;leaps&quot;)</span>
@@ -13305,7 +13353,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">regfit.full</span><span class="o">=</span><span class="nf">regsubsets</span><span class="p">(</span><span class="n">Salary</span><span class="o">~</span><span class="n">.,data</span><span class="o">=</span><span class="n">Hitters</span> <span class="p">,</span><span class="n">nvmax</span> <span class="o">=</span><span class="m">19</span><span class="p">)</span>
@@ -13326,7 +13374,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">reg.summary</span><span class="o">=</span><span class="nf">summary</span><span class="p">(</span><span class="n">regfit.full</span><span class="p">)</span>
@@ -13347,7 +13395,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">reg.summary</span><span class="o">$</span><span class="n">adjr2</span>
@@ -13369,25 +13417,25 @@ div#notebook {
 
 <div class="output_html rendered_html output_subarea ">
 <ol class=list-inline>
-	<li>36179679.2550418</li>
-	<li>30646559.8903729</li>
-	<li>29249296.8558673</li>
-	<li>27970851.8158163</li>
-	<li>27149899.4320115</li>
-	<li>26194903.9275952</li>
-	<li>25906547.5006238</li>
-	<li>25136929.9389601</li>
-	<li>24814051.3865869</li>
-	<li>24500401.5377396</li>
-	<li>24387345.0514399</li>
-	<li>24333232.3792723</li>
-	<li>24289147.8382415</li>
-	<li>24248660.392792</li>
-	<li>24235177.3552208</li>
-	<li>24219377.4729298</li>
-	<li>24209446.756639</li>
-	<li>24201837.3586359</li>
-	<li>24200699.5516628</li>
+	<li>0.318850280578499</li>
+	<li>0.420802390670369</li>
+	<li>0.445075316286119</li>
+	<li>0.467273423214861</li>
+	<li>0.480897071527011</li>
+	<li>0.497200054797098</li>
+	<li>0.500784873641778</li>
+	<li>0.513708257477458</li>
+	<li>0.51805715937398</li>
+	<li>0.522260623597179</li>
+	<li>0.522570578730917</li>
+	<li>0.521724458646507</li>
+	<li>0.5206736454971</li>
+	<li>0.519543086092702</li>
+	<li>0.517866147524149</li>
+	<li>0.516221853907086</li>
+	<li>0.514446423331</li>
+	<li>0.512609692022866</li>
+	<li>0.510626978687586</li>
 </ol>
 
 </div>
@@ -13408,7 +13456,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">par</span><span class="p">(</span><span class="n">mfrow</span> <span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="m">2</span><span class="p">))</span>
@@ -14440,7 +14488,7 @@ QmCC"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">regfit.fwd</span><span class="o">=</span><span class="nf">regsubsets</span><span class="p">(</span><span class="n">Salary</span><span class="o">~</span><span class="n">.,data</span><span class="o">=</span><span class="n">Hitters</span><span class="p">,</span> <span class="n">nvmax</span> <span class="o">=</span><span class="m">19</span><span class="p">,</span> <span class="n">method</span> <span class="o">=</span><span class="s">&quot;forward&quot;</span><span class="p">)</span>
@@ -14462,7 +14510,7 @@ QmCC"
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">regfit.bwd</span><span class="o">=</span><span class="nf">regsubsets</span><span class="p">(</span><span class="n">Salary</span><span class="o">~</span><span class="n">.,data</span><span class="o">=</span><span class="n">Hitters</span> <span class="p">,</span><span class="n">nvmax</span> <span class="o">=</span><span class="m">19</span><span class="p">,</span><span class="n">method</span> <span class="o">=</span><span class="s">&quot;backward&quot;</span><span class="p">)</span>
@@ -14492,7 +14540,7 @@ model.matrix()</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="nf">model.matrix</span><span class="p">(</span><span class="n">Salary</span><span class="o">~</span><span class="n">.,Hitters</span><span class="p">)</span><span class="n">[</span><span class="p">,</span><span class="m">-1</span><span class="n">]</span>
@@ -14506,7 +14554,7 @@ model.matrix()</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="c1"># install.packages(&quot;glmnet&quot;)</span>
@@ -14549,7 +14597,7 @@ Loaded glmnet 2.0-16
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[38]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">set.seed </span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
@@ -14585,7 +14633,7 @@ Loaded glmnet 2.0-16
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">grid</span> <span class="o">=</span><span class="m">10</span><span class="nf">^seq</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="m">-2</span><span class="p">,</span><span class="n">length</span> <span class="o">=</span><span class="m">100</span><span class="p">)</span>
@@ -14606,7 +14654,7 @@ Loaded glmnet 2.0-16
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">lasso.mod</span> <span class="o">=</span><span class="nf">glmnet</span><span class="p">(</span><span class="n">x[train</span> <span class="p">,</span><span class="n">]</span><span class="p">,</span><span class="n">y[train]</span><span class="p">,</span><span class="n">alpha</span> <span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="n">lambda</span> <span class="o">=</span><span class="n">grid</span><span class="p">)</span>
@@ -14628,7 +14676,7 @@ Loaded glmnet 2.0-16
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[47]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="nf">set.seed</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
@@ -15958,7 +16006,7 @@ AAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIJAMgf8P
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[49]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">bestlam</span> <span class="o">=</span> <span class="n">cv.out</span><span class="o">$</span><span class="n">lambda.min</span> <span class="c1">#使模型的MSE最小的lambda，也就是我們想要的lambda</span>
@@ -15992,7 +16040,7 @@ AAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIJAMgf8P
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[51]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">lasso.coef</span><span class="o">=</span><span class="nf">predict</span><span class="p">(</span><span class="n">cv.out</span> <span class="p">,</span><span class="n">type</span> <span class="o">=</span><span class="s">&quot;coefficients&quot;</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="n">bestlam</span><span class="p">)</span><span class="n">[1</span><span class="o">:</span><span class="m">20</span> <span class="p">,</span><span class="n">]</span> <span class="c1">#代入最佳lambda的The Lasso模型的係數</span>
@@ -16005,7 +16053,7 @@ AAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIJAMgf8P
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[59]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-r"><pre><span></span><span class="n">lasso.coef</span>
@@ -16087,11 +16135,12 @@ AAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIJAMgf8P
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[60]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-r"><pre><span></span><span class="n">out</span><span class="o">=</span><span class="nf">glmnet</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">alpha</span> <span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="n">lambda</span> <span class="o">=</span><span class="n">grid</span><span class="p">)</span>
-<span class="n">lasso.coef</span><span class="o">=</span><span class="nf">predict</span><span class="p">(</span><span class="n">out</span> <span class="p">,</span><span class="n">type</span> <span class="o">=</span><span class="s">&quot;coefficients&quot;</span><span class="p">,</span><span class="n">s</span><span class="o">=</span><span class="n">bestlam</span><span class="p">)</span><span class="n">[1</span><span class="o">:</span><span class="m">20</span> <span class="p">,</span><span class="n">]</span>
+<div class=" highlight hl-r"><pre><span></span><span class="n">x_new</span><span class="o">=</span><span class="n">x[</span><span class="p">,</span><span class="nf">names</span><span class="p">(</span><span class="n">lasso.coef[lasso.coef</span><span class="o">!=</span><span class="m">0</span><span class="n">]</span><span class="p">)</span><span class="n">[</span><span class="m">-1</span><span class="n">]]</span>
+<span class="n">out</span><span class="o">=</span><span class="nf">glmnet</span><span class="p">(</span><span class="n">x_new</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">alpha</span> <span class="o">=</span><span class="m">1</span><span class="p">,</span> <span class="n">lambda</span> <span class="o">=</span><span class="m">0</span><span class="p">)</span>
+<span class="n">lasso.coef</span><span class="o">=</span><span class="nf">predict</span><span class="p">(</span><span class="n">out</span><span class="p">,</span><span class="n">newx</span><span class="o">=</span><span class="n">x_new</span><span class="p">)</span>
 <span class="n">lasso.coef</span>
 </pre></div>
 
@@ -16110,48 +16159,75 @@ AAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIIAAAggggAACCCCAAAIIIJAMgf8P
 
 
 <div class="output_html rendered_html output_subarea ">
-<dl class=dl-horizontal>
-	<dt>(Intercept)</dt>
-		<dd>1.27479059109959</dd>
-	<dt>AtBat</dt>
-		<dd>-0.054971427331518</dd>
-	<dt>Hits</dt>
-		<dd>2.18034583361294</dd>
-	<dt>HmRun</dt>
-		<dd>0</dd>
-	<dt>Runs</dt>
-		<dd>0</dd>
-	<dt>RBI</dt>
-		<dd>0</dd>
-	<dt>Walks</dt>
-		<dd>2.29192406458189</dd>
-	<dt>Years</dt>
-		<dd>-0.338061091664961</dd>
-	<dt>CAtBat</dt>
-		<dd>0</dd>
-	<dt>CHits</dt>
-		<dd>0</dd>
-	<dt>CHmRun</dt>
-		<dd>0.0282501287940462</dd>
-	<dt>CRuns</dt>
-		<dd>0.2162838490676</dd>
-	<dt>CRBI</dt>
-		<dd>0.417125367645419</dd>
-	<dt>CWalks</dt>
-		<dd>0</dd>
-	<dt>LeagueN</dt>
-		<dd>20.286150231074</dd>
-	<dt>DivisionW</dt>
-		<dd>-116.167558696372</dd>
-	<dt>PutOuts</dt>
-		<dd>0.237523845868754</dd>
-	<dt>Assists</dt>
-		<dd>0</dd>
-	<dt>Errors</dt>
-		<dd>-0.856291484604417</dd>
-	<dt>NewLeagueN</dt>
-		<dd>0</dd>
-</dl>
+<table>
+<caption>A matrix: 263 × 1 of type dbl</caption>
+<thead>
+	<tr><th></th><th scope=col>s0</th></tr>
+</thead>
+<tbody>
+	<tr><th scope=row>-Alan Ashby</th><td> 425.49821</td></tr>
+	<tr><th scope=row>-Alvin Davis</th><td> 771.27474</td></tr>
+	<tr><th scope=row>-Andre Dawson</th><td> 969.17076</td></tr>
+	<tr><th scope=row>-Andres Galarraga</th><td> 534.27196</td></tr>
+	<tr><th scope=row>-Alfredo Griffin</th><td> 468.67032</td></tr>
+	<tr><th scope=row>-Al Newman</th><td> 252.39043</td></tr>
+	<tr><th scope=row>-Argenis Salazar</th><td>  66.78058</td></tr>
+	<tr><th scope=row>-Andres Thomas</th><td> 128.29649</td></tr>
+	<tr><th scope=row>-Andre Thornton</th><td> 888.34440</td></tr>
+	<tr><th scope=row>-Alan Trammell</th><td> 892.13688</td></tr>
+	<tr><th scope=row>-Alex Trevino</th><td> 209.13345</td></tr>
+	<tr><th scope=row>-Andy VanSlyke</th><td> 547.69918</td></tr>
+	<tr><th scope=row>-Alan Wiggins</th><td> 328.90941</td></tr>
+	<tr><th scope=row>-Bill Almon</th><td> 360.07041</td></tr>
+	<tr><th scope=row>-Buddy Bell</th><td>1136.61633</td></tr>
+	<tr><th scope=row>-Buddy Biancalana</th><td>  25.61142</td></tr>
+	<tr><th scope=row>-Bruce Bochy</th><td>  34.18925</td></tr>
+	<tr><th scope=row>-Barry Bonds</th><td> 565.43705</td></tr>
+	<tr><th scope=row>-Bobby Bonilla</th><td> 383.52376</td></tr>
+	<tr><th scope=row>-Bob Brenly</th><td> 595.07888</td></tr>
+	<tr><th scope=row>-Bill Buckner</th><td>1394.37919</td></tr>
+	<tr><th scope=row>-Brett Butler</th><td> 708.76396</td></tr>
+	<tr><th scope=row>-Bob Dernier</th><td> 338.17127</td></tr>
+	<tr><th scope=row>-Bo Diaz</th><td> 468.38711</td></tr>
+	<tr><th scope=row>-Bill Doran</th><td> 592.97564</td></tr>
+	<tr><th scope=row>-Brian Downing</th><td> 843.28293</td></tr>
+	<tr><th scope=row>-Billy Hatcher</th><td> 176.18670</td></tr>
+	<tr><th scope=row>-Brook Jacoby</th><td> 568.20977</td></tr>
+	<tr><th scope=row>-Bob Kearney</th><td> 154.63318</td></tr>
+	<tr><th scope=row>-Bill Madlock</th><td> 757.80249</td></tr>
+	<tr><th scope=row>⋮</th><td>⋮</td></tr>
+	<tr><th scope=row>-Tony Fernandez</th><td> 498.1851</td></tr>
+	<tr><th scope=row>-Tim Flannery</th><td> 326.8197</td></tr>
+	<tr><th scope=row>-Tom Foley</th><td> 321.6962</td></tr>
+	<tr><th scope=row>-Tony Gwynn</th><td> 560.8396</td></tr>
+	<tr><th scope=row>-Terry Harper</th><td> 171.5325</td></tr>
+	<tr><th scope=row>-Tommy Herr</th><td> 793.9561</td></tr>
+	<tr><th scope=row>-Tim Hulett</th><td> 168.8655</td></tr>
+	<tr><th scope=row>-Terry Kennedy</th><td> 204.5902</td></tr>
+	<tr><th scope=row>-Tito Landrum</th><td> 212.2770</td></tr>
+	<tr><th scope=row>-Tim Laudner</th><td> 189.8578</td></tr>
+	<tr><th scope=row>-Tom Paciorek</th><td> 189.5304</td></tr>
+	<tr><th scope=row>-Tony Pena</th><td> 840.6226</td></tr>
+	<tr><th scope=row>-Terry Pendleton</th><td> 474.8712</td></tr>
+	<tr><th scope=row>-Tony Phillips</th><td> 437.6520</td></tr>
+	<tr><th scope=row>-Terry Puhl</th><td> 352.0396</td></tr>
+	<tr><th scope=row>-Ted Simmons</th><td> 933.3177</td></tr>
+	<tr><th scope=row>-Tim Teufel</th><td> 423.6050</td></tr>
+	<tr><th scope=row>-Tim Wallach</th><td> 662.1702</td></tr>
+	<tr><th scope=row>-Vince Coleman</th><td> 557.1770</td></tr>
+	<tr><th scope=row>-Von Hayes</th><td>1062.7998</td></tr>
+	<tr><th scope=row>-Vance Law</th><td> 495.5581</td></tr>
+	<tr><th scope=row>-Wally Backman</th><td> 411.2391</td></tr>
+	<tr><th scope=row>-Wade Boggs</th><td> 943.9321</td></tr>
+	<tr><th scope=row>-Will Clark</th><td> 476.8901</td></tr>
+	<tr><th scope=row>-Wally Joyner</th><td> 703.2338</td></tr>
+	<tr><th scope=row>-Willie McGee</th><td> 671.2258</td></tr>
+	<tr><th scope=row>-Willie Randolph</th><td> 985.4383</td></tr>
+	<tr><th scope=row>-Wayne Tolleson</th><td> 251.8945</td></tr>
+	<tr><th scope=row>-Willie Upshaw</th><td>1073.3135</td></tr>
+	<tr><th scope=row>-Willie Wilson</th><td> 573.6150</td></tr>
+</tbody>
+</table>
 
 </div>
 

@@ -2,6 +2,9 @@
 library(ISLR) #安裝需要的package
 
 data(Hitters) #取出資料
+head(Hitters)
+
+?Hitters
 
 names(Hitters) #看資料的欄位名稱
 
@@ -67,8 +70,9 @@ lasso.coef=predict(cv.out ,type ="coefficients",s=bestlam)[1:20 ,] #代入最佳
 
 lasso.coef
 
-out=glmnet(x,y,alpha =1, lambda =grid)
-lasso.coef=predict(out ,type ="coefficients",s=bestlam)[1:20 ,]
+x_new=x[,names(lasso.coef[lasso.coef!=0])[-1]]
+out=glmnet(x_new,y,alpha =1, lambda =0)
+lasso.coef=predict(out,newx=x_new)
 lasso.coef
 
 
