@@ -1,12 +1,16 @@
 library(ISLR)
 set.seed(1)
+# 從 1 到 392 抽樣 196 當成 training set
 train=sample(1:392 ,196)
 poly_validation_error=rep(0,5);
 mpg=Auto$mpg
 for(i in 1:5){
+    # mpg 對 horsepower 配適合 i 階多項式
     lm.fit=lm(mpg~poly(horsepower ,i) ,data=Auto ,subset =train )
-    validation_pred=predict(lm.fit,Auto[-train,])
-    validation_mpg=mpg[-train]
+    # mpg 預測值
+    validation_pred=predict(lm.fit,Auto)
+    validation_mpg=mpg
+    # 計算 validation error 
     poly_validation_error[i]=mean((validation_mpg-validation_pred)[-train]^2)
 }
 plot(1:5,poly_validation_error,xlab="polynomial order",ylab="validation error",type="b")
@@ -14,13 +18,17 @@ plot(1:5,poly_validation_error,xlab="polynomial order",ylab="validation error",t
 library(ISLR)
 for(tmp_seed in 1:20){
     set.seed(tmp_seed)
+    # 從 1 到 392 抽樣 196 當成 training set
     train=sample(1:392 ,196)
     poly_validation_error=rep(0,5);
     mpg=Auto$mpg
     for(i in 1:5){
+        # mpg 對 horsepower 配適合 i 階多項式
         lm.fit=lm(mpg~poly(horsepower ,i) ,data=Auto ,subset =train )
-        validation_pred=predict(lm.fit,Auto[-train,])
-        validation_mpg=mpg[-train]
+        # mpg 預測值
+        validation_pred=predict(lm.fit,Auto)
+        validation_mpg=mpg
+        # 計算 validation error 
         poly_validation_error[i]=mean((validation_mpg-validation_pred)[-train]^2)
     }
     if(tmp_seed==1){
@@ -70,7 +78,7 @@ obj <- tune(svm, Species~., data = iris,
 summary(obj)
 plot(obj)
 
-m_svm<-svm(Species~., data = iris,gamma=0.625,cost=2,kernel="radial")
+m_svm<-svm(Species~., data = iris,gamma=0.625,cost=4,kernel="radial")
 svm_pred=predict(m_svm)
 table(iris$Species,svm_pred)
 mean(iris$Species==svm_pred)
